@@ -12,6 +12,7 @@ Este projeto consiste em um website completo, moderno e responsivo para um portf
   - **Portfólio**: Galeria principal de imagens.
   - **Sobre**: Informações sobre o fotógrafo, com layout de imagem + texto.
   - **Contato**: Formulário de contato estilizado e informações de localização.
+- **API Própria de Contato**: Envio assíncrono do formulário para um back-end local em Node.js.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -23,22 +24,63 @@ Este projeto consiste em um website completo, moderno e responsivo para um portf
   - Media Queries para responsividade.
 - **Google Fonts**: Integração de fontes web.
 - **Unsplash Source**: Imagens de placeholder de alta qualidade.
+- **Node.js**: Servidor HTTP local e endpoint `POST /api/contact`.
 
-## 🚀 Como Executar
+## 🚀 Como Executar Localmente
 
 1. Clone ou baixe este repositório.
-2. Abra o arquivo `index.html` em seu navegador de preferência.
-3. Navegue entre as páginas através do menu superior.
+2. No terminal, acesse a pasta do projeto.
+3. Execute `npm run dev`.
+4. Abra `http://127.0.0.1:3000` no navegador.
+5. Navegue entre as páginas através do menu superior.
+
+## ▲ Deploy na Vercel
+
+1. Importe o repositório na Vercel.
+2. Mantenha a raiz do projeto como diretório de deploy.
+3. A Vercel usará `vercel.json` para publicar:
+   - `/` -> `Page/index.html`
+   - `/sobre` -> `Page/sobre.html`
+   - `/contato` -> `Page/contato.html`
+4. A função serverless `api/contact.js` responderá em `POST /api/contact`.
+5. Não é necessário configurar comando de build para este projeto estático.
+
+## 📦 GitHub
+
+- O repositório já pode ser enviado normalmente para o GitHub.
+- O arquivo `.gitignore` ignora pastas e arquivos locais como `node_modules/` e `.vercel/`.
+- O arquivo `data/messages.json` pode permanecer versionado com `[]` para manter a estrutura do projeto local.
+
+## Formulário de Contato
+
+- A página `Page/contato.html` envia os dados via `fetch()` para a rota `POST /api/contact`.
+- O script front-end do formulário fica em `scripts/contact.js`.
+- A função serverless da Vercel fica em `api/contact.js` e valida os campos obrigatórios (`name`, `email`, `message`).
+- Em ambiente serverless, gravação permanente em arquivo local não é confiável; para persistência real, use banco de dados ou serviço de e-mail.
+- O feedback de sucesso ou erro aparece na própria interface do formulário.
 
 ## 📝 Estrutura de Arquivos
 
 ```
 /
-├── index.html    # Página inicial (Portfólio)
-├── sobre.html    # Página Sobre o fotógrafo
-├── contato.html  # Página de Contato
-├── style.css     # Estilização global
-└── README.md     # Documentação do projeto
+├── Page/
+│   ├── index.html   # Página inicial
+│   ├── sobre.html   # Página Sobre
+│   └── contato.html # Página Contato
+├── dev/
+│   └── server.js    # Servidor local para desenvolvimento
+├── api/
+│   └── contact.js   # Função serverless da Vercel
+├── scripts/
+│   └── contact.js   # Script front-end do formulário
+├── style/
+│   └── style.css    # Estilização global
+├── data/
+│   └── messages.json
+├── vercel.json      # Rotas de deploy na Vercel
+├── package.json
+├── .gitignore
+└── README.md
 ```
 
 ## 👤 Autor

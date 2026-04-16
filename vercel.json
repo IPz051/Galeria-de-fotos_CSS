@@ -1,0 +1,17 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Page/index.html"
+    },
+    {
+      "source": "/sobre",
+      "destination": "/Page/sobre.html"
+    },
+    {
+      "source": "/contato",
+      "destination": "/Page/contato.html"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "exercicio-2---galeria-de-fotos",
+  "version": "1.0.0",
+  "description": "Este projeto consiste em um website completo, moderno e responsivo para um portfólio de fotografia, desenvolvido como parte do curso OneBitCode (Fullstack). O objetivo é demonstrar habilidades em HTML5 semântico e CSS3 moderno (Flexbox, Grid/Masonry, Variáveis CSS).",
+  "private": true,
+  "main": "dev/server.js",
+  "scripts": {
+    "dev": "node dev/server.js",
+    "start": "node dev/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IPz051/Galeria-de-fotos_CSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IPz051/Galeria-de-fotos_CSS/issues"
+  },
+  "homepage": "https://github.com/IPz051/Galeria-de-fotos_CSS#readme"
+}
