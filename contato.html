@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Vision Photography</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Vision<span>.</span></h1>
+            <nav class="nav">
+                <a href="/">Portfólio</a>
+                <a href="/sobre">Sobre</a>
+                <a href="/contato" class="active">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Vamos criar algo incrível juntos. Preencha o formulário abaixo.</p>
+                
+                <div class="contact-container">
+                    <form class="contact-form" data-contact-form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject">
+                                <option value="orcamento">Orçamento de Ensaio</option>
+                                <option value="evento">Cobertura de Evento</option>
+                                <option value="parceria">Parceria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Conte-me mais sobre seu projeto..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                        <p class="form-status" data-form-status aria-live="polite"></p>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <p><strong>E-mail:</strong> contato@visionphotography.com</p>
+                        <p><strong>Telefone:</strong> +55 (11) 99999-9999</p>
+                        <p><strong>Estúdio:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+                        
+                        <div class="map-embed">
+                            <iframe
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-46.6625%2C-23.5718%2C-46.6435%2C-23.5568&amp;layer=mapnik&amp;marker=-23.5643%2C-46.6527"
+                                title="Mapa de localização do estúdio na Avenida Paulista"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p class="map-credit">
+                            <a href="https://www.openstreetmap.org/?mlat=-23.5643&amp;mlon=-46.6527#map=16/-23.5643/-46.6527" target="_blank" rel="noopener noreferrer">Ver mapa ampliado no OpenStreetMap</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vision Photography. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Behance</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/contact.js" defer></script>
+</body>
+</html>

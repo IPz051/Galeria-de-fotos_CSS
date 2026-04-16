@@ -38,10 +38,10 @@ Este projeto consiste em um website completo, moderno e responsivo para um portf
 
 1. Importe o repositório na Vercel.
 2. Mantenha a raiz do projeto como diretório de deploy.
-3. A Vercel usará `vercel.json` para publicar:
-   - `/` -> `Page/index.html`
-   - `/sobre` -> `Page/sobre.html`
-   - `/contato` -> `Page/contato.html`
+3. As páginas principais ficam na raiz do projeto:
+   - `/` -> `index.html`
+   - `/sobre` -> `sobre.html`
+   - `/contato` -> `contato.html`
 4. A função serverless `api/contact.js` responderá em `POST /api/contact`.
 5. Não é necessário configurar comando de build para este projeto estático.
 
@@ -63,10 +63,13 @@ Este projeto consiste em um website completo, moderno e responsivo para um portf
 
 ```
 /
+├── index.html       # Página inicial na raiz para deploy
+├── sobre.html       # Página Sobre na raiz para deploy
+├── contato.html     # Página Contato na raiz para deploy
 ├── Page/
-│   ├── index.html   # Página inicial
-│   ├── sobre.html   # Página Sobre
-│   └── contato.html # Página Contato
+│   ├── index.html   # Versões organizadas das páginas
+│   ├── sobre.html
+│   └── contato.html
 ├── dev/
 │   └── server.js    # Servidor local para desenvolvimento
 ├── api/
