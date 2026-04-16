@@ -36,6 +36,8 @@ Este projeto consiste em um website completo, moderno e responsivo para um portf
 
 ## ▲ Deploy na Vercel
 
+- Link do deploy: [galeria-de-fotos-css](https://vercel.com/iggors-projects-3f79b84d/galeria-de-fotos-css)
+
 1. Importe o repositório na Vercel.
 2. Mantenha a raiz do projeto como diretório de deploy.
 3. As páginas principais ficam na raiz do projeto:
